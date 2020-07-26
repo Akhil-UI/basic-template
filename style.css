@@ -1,0 +1,240 @@
+@font-face {
+  font-family: "Roboto";
+  src: "fonts/Roboto/Roboto-Regular.ttf";
+}
+
+/* CSS Variables */
+
+:root {
+  --primary-color: #4458dc;
+  --primary-color2: #854fee;
+  --title-color: #141313;
+  --text-color: #777777;
+  --border-color: #201f1f17;
+  --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+
+  /* font family variables. */
+  --roboto: "Roboto", cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: var(--roboto);
+  /*background: -webkit-linear-gradient(left, #76b852, #8dc26f);
+  background: linear-gradient(to right, #76b852, #8dc26f);*/
+}
+/* Global Classes */
+
+.title-text {
+  font: normal bold 50px/ 72px var(--roboto);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* Buttons */
+
+.button {
+  padding: 0.8rem 2.2rem;
+  font: normal 500 16px/20px var(--roboto);
+  position: relative;
+  border: 3px solid transparent;
+  border-radius: 4px;
+}
+
+.button.primary-button {
+  background: var(--gradient-color);
+  background-clip: padding-box;
+  color: whitesmoke;
+  transition: background 0.6s ease;
+  box-shadow: var(--box-shadow);
+}
+
+.button.primary-button:hover {
+  background: whitesmoke;
+  background-clip: padding-box;
+  color: black;
+}
+
+.button.primary-button::after,
+.button.secondary-button::after {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: var(--gradient-color);
+  content: " ";
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.button.secondary-button {
+  background: white;
+  background-clip: padding-box;
+  transition: background 0.6s ease;
+}
+
+.button.secondary-button:hover {
+  background: var(--gradient-color);
+  color: whitesmoke;
+  box-shadow: var(--box-shadow);
+}
+
+p.para {
+  color: var(--text-color);
+  font: normal 500 16px/ 25px var(--roboto);
+}
+
+.font-roboto {
+  font-family: var(--roboto);
+}
+
+button:focus,
+button:active button:hover .btn:active,
+.btn.active {
+  outline: 0px !important;
+  box-shadow: none !important;
+}
+
+.title-h1 {
+  font: normal bold 39px/ 40px var(--roboto);
+}
+
+.navbar_fixed {
+  position: fixed;
+  width: 100%;
+  top: -1px;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  box-shadow: var(--box-shadow);
+  z-index: 999;
+  transition: background 1s ease;
+}
+
+.container {
+  background: lightblue;
+  width: calc(100% - 2rem);
+  max-width: 90%rem;
+  margin: 0 auto;
+}
+
+/* This is for demo purposes only! */
+div[class^="col-"] {
+  background: pink;
+  border: 1px solid red;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+}
+
+.col-11 {
+  flex: 0 0 calc(100% / 12 * 11); /* 11/12 */
+}
+
+.col-10 {
+  flex: 0 0 calc(100% / 12 * 10);
+}
+
+.col-9 {
+  flex: 0 0 calc(100% / 12 * 9);
+}
+
+.col-8 {
+  flex: 0 0 calc(100% / 12 * 8);
+}
+
+.col-7 {
+  flex: 0 0 calc(100% / 12 * 7);
+}
+
+.col-6 {
+  flex: 0 0 calc(100% / 12 * 6);
+}
+
+.col-5 {
+  flex: 0 0 calc(100% / 12 * 5);
+}
+
+.col-4 {
+  flex: 0 0 calc(100% / 12 * 4);
+}
+
+.col-3 {
+  flex: 0 0 calc(100% / 12 * 3);
+}
+
+.col-2 {
+  flex: 0 0 calc(100% / 12 * 2);
+}
+
+.col-1 {
+  flex: 0 0 calc(100% / 12 * 1);
+}
+
+/* if the viewport is equal to 340px or less than that */
+@media only screen and (max-width: 340px) {
+}
+
+/* if the viewport is equal to 792px or less than that */
+@media only screen and (max-width: 792px) {
+}
+
+/* if the viewport is equal to 1910px or less than that */
+@media only screen and (max-width: 1910px) {
+}
+
+.container2 {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* if the viewport is equal to 576px or greater than that */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* if the viewport is equal to 768px or greater than that */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* if the viewport is equal to 992px or greater than that */
+@media (min-width: 992px) {
+  .container {
+    max-width: 920px;
+  }
+}
+
+/* if the viewport is equal to 1200px or greater than that */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
